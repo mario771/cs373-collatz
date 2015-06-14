@@ -15,7 +15,7 @@
 from io       import StringIO
 from unittest import main, TestCase
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, compute_cycles
 
 # -----------
 # TestCollatz
@@ -32,7 +32,6 @@ class TestCollatz (TestCase) :
         self.assertEqual(i,  1)
         self.assertEqual(j, 10)
 
-
     def test_read_2 (self) :
         s    = "567 889\n"
         i, j = collatz_read(s)
@@ -44,7 +43,13 @@ class TestCollatz (TestCase) :
         i, j = collatz_read(s)
         self.assertEqual(i,  13456)
         self.assertEqual(j,  47)
-
+     
+    def test_read_4 (self) :
+        s    = "578954 -1\n"
+        i, j = collatz_read(s)
+        self.assertEqual(i, 578954 )
+        self.assertEqual(j, -1)
+   
     # ----
     # eval
     # ----
@@ -65,7 +70,7 @@ class TestCollatz (TestCase) :
         v = collatz_eval(900, 1000)
         self.assertEqual(v, 174)
 
-    ##test failture cases 
+    ##test failure cases 
     def test_eval_5 (self) :
         v = collatz_eval(67452, 67452)
         self.assertEqual(v, 100)
@@ -87,9 +92,25 @@ class TestCollatz (TestCase) :
         v = collatz_eval(-1, 1)
         self.assertEqual(v,0)
 
-    def test_eval_9 (self) :
+    def test_eval_10 (self) :
         v = collatz_eval(600, 1000000)
         self.assertEqual(v,0)
+    
+    # ----
+    # cycles
+    # ----
+
+    def test_cycles_1 (self) :
+        c = compute_cycles(45)
+        self.assertEqual(c, 17)
+
+    def test_cycles_2 (self) :
+        c = compute_cycles(800)
+        self.assertEqual(c,29) 
+
+    def test_cycles_3 (self) :
+        c = compute_cycles(578302)
+        self.assertEqual(c,297)
 
     # -----
     # print
@@ -100,7 +121,6 @@ class TestCollatz (TestCase) :
         collatz_print(w, 1, 10, 20)
         self.assertEqual(w.getvalue(), "1 10 20\n")
 
-
     def test_print_2 (self) :
         w = StringIO()
         collatz_print(w, 201, 210, 89)
@@ -109,7 +129,11 @@ class TestCollatz (TestCase) :
         w = StringIO()
         collatz_print(w, 900, 1000, 174)
         self.assertEqual(w.getvalue(), "900 1000 174\n")
-
+    
+    def test_print_4 (self) :
+        w = StringIO()
+        collatz_print(w, 201, 210, 89)
+        self.assertEqual(w.getvalue(), "201 210 89\n")
 
     # -----
     # solve
