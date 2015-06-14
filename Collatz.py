@@ -37,6 +37,7 @@ def collatz_eval (i, j) :
     """
     max_cycles = 0
     cycles = 0
+    m = 0
     start = i
     stop = j
 
@@ -50,6 +51,10 @@ def collatz_eval (i, j) :
     if start == stop:
         return compute_cycles(start)
 
+    m = (stop // 2) + 1 #range optimization studied in class
+    if start < m:
+        start = m
+    
     for i in range(start,stop + 1):
         cycles = compute_cycles(i)
         if cycles > max_cycles:
@@ -66,9 +71,10 @@ def compute_cycles(num):
     while num != 1:
         if num % 2 == 0:
             num  = num / 2
+            cycles += 1
         else:
-            num = 3 * num + 1
-        cycles += 1
+            num =(3 * num + 1) / 2
+            cycles += 2
 
     assert cycles > 0
     return cycles	
