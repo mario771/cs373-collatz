@@ -6,6 +6,8 @@
 # Glenn P. Downing
 # ---------------------------
 
+lazy_cache = {} # dictionary used for storing cycle lengths
+
 # ------------
 # collatz_read
 # ------------
@@ -37,6 +39,7 @@ def collatz_eval (i, j) :
     """
     max_cycles = 0
     cycles = 0
+    m = 0
     start = i
     stop = j
 
@@ -50,8 +53,16 @@ def collatz_eval (i, j) :
     if start == stop:
         return compute_cycles(start)
 
+    m = (stop // 2) + 1 #range optimization studied in class
+    if start < m:
+        start = m
+    
     for i in range(start,stop + 1):
-        cycles = compute_cycles(i)
+        if i in lazy_cache:
+            cycles = lazy_cache[i]
+        else:
+            cycles = compute_cycles(i)
+
         if cycles > max_cycles:
             max_cycles = cycles
 
@@ -62,13 +73,22 @@ def collatz_eval (i, j) :
 def compute_cycles(num):
     assert num > 0
     cycles = 1
+    original_num = num
+    cached_val = 0 
 
     while num != 1:
-        if num % 2 == 0:
-            num  = num / 2
+        if num in lazy_cache:
+            cached_val = (lazy_cache[num] + cycles) - 1
+            lazy_cache[original_num] = cached_val
+            return cached_val        
         else:
-            num = 3 * num + 1
-        cycles += 1
+            if num % 2 == 0:
+                num  = num >> 1
+                cycles += 1
+            else:
+                num =(3 * num + 1) >> 1
+                cycles += 2
+    lazy_cache[original_num] = cycles
 
     assert cycles > 0
     return cycles	
