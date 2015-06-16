@@ -70,7 +70,6 @@ class TestCollatz (TestCase) :
         v = collatz_eval(900, 1000)
         self.assertEqual(v, 174)
 
-    ##test failure cases 
     def test_eval_5 (self) :
         v = collatz_eval(67452, 67452)
         self.assertEqual(v, 100)
@@ -83,7 +82,8 @@ class TestCollatz (TestCase) :
         v = collatz_eval(210, 201)
         self.assertEqual(v, 89)
 
-    ##test corner cases
+    """  Used to test invalid input 
+
     def test_eval_8 (self) :
         v = collatz_eval(0, 0)
         self.assertEqual(v, 0)
@@ -94,7 +94,7 @@ class TestCollatz (TestCase) :
 
     def test_eval_10 (self) :
         v = collatz_eval(600, 1000000)
-        self.assertEqual(v,0)
+        self.assertEqual(v,0) """
     
     # ----
     # cycles
@@ -151,6 +151,12 @@ class TestCollatz (TestCase) :
         w = StringIO()
         collatz_solve(r, w)
         self.assertEqual(w.getvalue(), "210 201 89\n900 1000 174\n100 200 125\n67452 67452 100\n")
+
+    def test_solve_3 (self) :
+        r = StringIO("389 38900\n509809 352\n4879 24789\n2012 9983\n")
+        w = StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "389 38900 324\n509809 352 449\n4879 24789 282\n2012 9983 262\n")
 
 
 
