@@ -1,0 +1,167 @@
+commit 4c92e812f9f84e4e09032b1f624c8648edd4d749
+Merge: 317eaed 61e916d
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 21:49:40 2015 -0500
+
+    Merge branch 'dev'
+    final merge
+
+commit 61e916ded7ec270149d4cceeb6ff300becfdf1b0
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 21:44:10 2015 -0500
+
+    final commit, assuming I didnt miss anything
+
+commit 317eaed9d7cb3844dcaf3d60c5322970a1dbe097
+Merge: 4171d46 cfaadf4
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 20:45:44 2015 -0500
+
+    Merge branch 'dev'
+    added acceptance tests
+
+commit cfaadf4139a1cdb68230acb839b9736f34ba5baa
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 20:34:30 2015 -0500
+
+    recommiting due to failed travis build
+
+commit 30662ecb413ea9d39d59b1d398dec439e6fc3fe2
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 20:22:55 2015 -0500
+
+    added acceptance tests
+
+commit 4171d46eb070cb434d9bb8b2284b1b9f7893c9a4
+Merge: 3128725 a4ceb07
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 19:40:02 2015 -0500
+
+    Merge branch 'dev'
+    adding spherecollatz.py to master
+
+commit 31287250db9537f2fca4470d683b1ec78aae8916
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 19:39:13 2015 -0500
+
+    trying to fix a merge issue, code working
+
+commit a4ceb07b81ba020d41bdbfbf8168e387108e90aa
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 19:33:30 2015 -0500
+
+    removed sample files
+
+commit 97d4f850cd73f4f8ee729b14bf8418f6a37c2b54
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 19:28:12 2015 -0500
+
+    updated tests
+
+commit 93e4c0f429af2ee8e6bf8913a0923465a83cde1e
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 19:08:01 2015 -0500
+
+    removed some files
+
+commit df55e7a37766a5c5ae9ec77bd44e7a9395e321a3
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 14:59:19 2015 -0500
+
+    removed unnecessary files
+
+commit 4a67de46f5ad31c33e93ee69162fae07d1be25fe
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 02:21:09 2015 -0500
+
+    working solution with lazy cache
+
+commit 9a76426f57f276d9171e14d3ae0832351fa815f9
+Merge: 9511eea 84ee3da
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 02:19:20 2015 -0500
+
+    Merge branch 'dev'
+    working solution with lazy cache
+
+commit 84ee3da3215fb80f9356b5b9235326a3e22f807e
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Mon Jun 15 02:12:06 2015 -0500
+
+    resolves #22 and #23 added a working cache
+
+commit a060219e7e0ce3e9bb652a28f9c829f573893689
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Sun Jun 14 15:06:48 2015 -0500
+
+    resolves #18 accepted Sphere solution with optimizations
+
+commit 9511eea8022dcb81ee17cae7aa8f2aa7d68ccab4
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Sun Jun 14 12:52:31 2015 -0500
+
+    merged with dev.added simple solution to master
+
+commit ba91a26a3fb0c84e9a569a3af39da95290093ea8
+Merge: d2943e3 d13cdf4
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Sun Jun 14 12:46:14 2015 -0500
+
+    Merge branch 'dev'
+    merging simple solution to master
+
+commit d13cdf422e490dc2151de4671f182df6164575b6
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Sun Jun 14 12:39:23 2015 -0500
+
+    resolves #15 simple solution for collatz
+
+commit dadba63987867e940a53154e0f3acc3f5be0358b
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Thu Jun 11 18:48:12 2015 -0500
+
+    resolves #14 added more unit tests
+
+commit a7ccc798de0a5fe6a3bdf330eb8f5244d5ccc991
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Thu Jun 11 16:27:15 2015 -0500
+
+    resolves #13 fixed unit tests
+
+commit d2943e33ffb1f63d6c5dca87fec32b24ee0fb4ed
+Merge: f57b075 feb1507
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Thu Jun 11 15:26:33 2015 -0500
+
+    Merge branch 'dev'
+    test merge after step 14
+
+commit feb1507b77b5bd3792fc33910486d1103d89d141
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Thu Jun 11 15:21:42 2015 -0500
+
+    resolves #10
+
+commit f57b0754d77eca3d85ac5a47bc93c0411e0ea736
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Wed Jun 10 20:13:01 2015 -0500
+
+    triggering travis build
+
+commit f7ad3b896987158749426ee30974e05e61a190f1
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Wed Jun 10 20:09:50 2015 -0500
+
+    changed yml, triggering first travis build
+
+commit 378c4ea7b321bc4286cf6a26d5cc6ec23f98c938
+Author: Mario <mario771@cs.utexas.edu>
+Date:   Wed Jun 10 19:47:23 2015 -0500
+
+    added private code repo files
+
+commit f4fea73080aa8d737e35d8f4bab2d67a2343070e
+Author: mario771 <msolis271@utexas.edu>
+Date:   Wed Jun 10 15:24:45 2015 -0500
+
+    Initial commit
