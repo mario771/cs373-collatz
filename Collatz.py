@@ -32,9 +32,9 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     assert i > 0
-    assert i < 999999
+    assert i <= 999999
     assert j > 0
-    assert j < 999999
+    assert j <= 999999
     
     max_cycles = 0
     cycles = 0
